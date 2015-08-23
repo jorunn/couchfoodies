@@ -1,0 +1,15 @@
+<h1>All Cooking Shows, All the Time</h1>
+
+<% @cooking_shows.in_groups_of(5) do |group| %>
+  <div class="row">
+    <% group.compact.each do |cooking_show| %>
+      <div class="col-md-4">
+        <%= image_tag cooking_show.picture_url(:thumb) if cooking_show.picture?%>
+        <h2><%= link_to cooking_show.name, cooking_show %></h2>
+        <%= cooking_show.description %>
+        <%= cooking_show.years %>
+        <%= cooking_show.country %>
+      </div>
+    <% end %>
+  </div>
+<% end %>

@@ -1,0 +1,37 @@
+<%= form_for(@cooking_show) do |f| %>
+  <% if @cooking_show.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@cooking_show.errors.count, "error") %> prohibited this cooking_show from being saved:</h2>
+
+      <ul>
+      <% @cooking_show.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :country %><br>
+    <%= f.text_field :country %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </div>
+  <div class="field">
+    <%= f.label :years %><br>
+    <%= f.text_field :years %>
+  </div>
+  <div class="field">
+    <%= f.label :picture %><br>
+    <%= f.file_field :picture %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

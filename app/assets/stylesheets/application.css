@@ -1,0 +1,62 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ @import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:300&subset=latin,latin-ext);
+
+body {
+  padding-top: 60px;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  color: maroon;
+}
+
+a {
+  color: maroon;
+  text-decoration: none;
+}
+
+a:hover {
+  color: maroon;
+  text-decoration: underline;
+}
+
+p.pull-right img {
+  max-width: 25px;
+  padding-right: 4px;
+}
+
+.navbar { min-height: 38px; background-color: #f55e55; }
+.navbar a.brand { font-size: 18px; }
+.navbar a.brand:hover { color: black; background-color: papayawhip; text-decoration: none; }
+.navbar a.brand:active { color: black; background-color: papayawhip; text-decoration: none; }
+
+footer {
+  background-color: papayawhip;
+  padding: 1em 0;
+  margin: 1em 0;
+}
+
+.field-label {
+  font-weight: bold;
+}
+
+.actions {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+}
