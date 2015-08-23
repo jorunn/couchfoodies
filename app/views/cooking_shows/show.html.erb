@@ -7,6 +7,13 @@
     <p><span class="field-label">Country:</span> <%= @cooking_show.country %></p>
     <p><span class="field-label">Years:</span> <%= @cooking_show.years %></p>
     <p><span class="field-label">Description:</span> <%= @cooking_show.description %></p>
+    <p>Find <%= @cooking_show.name %>:</p>
+      <ul>
+        <li><a href="https://www.youtube.com/results?search_query=<%= @cooking_show.name %>">YouTube</a></li>
+        <li><a href="http://www.imdb.com/find?ref_=nv_sr_fn&q=<%= @cooking_show.name %>&s=all">IMDB</a></li>
+        <li><a href="https://www.wikipedia.org/search-redirect.php?family=wikipedia&search=<%= @cooking_show.name %>&language=en&go=++%E2%86%92++&go=Go">Wikipedia</a></li>
+        <li><a href="https://www.reddit.com/search?q=<%= @cooking_show.name %>">Reddit</a></li>
+      </ul>
 
     <p>
       <%= link_to 'Edit', edit_cooking_show_path(@cooking_show) %> |
@@ -23,6 +30,7 @@
           <p><%= link_to 'Delete', comment_path(comment), method: :delete, data: { confirm: 'Are you sure?' } %></p>
         </div>
       <% end %>
+      <h3>Add New Comment</h3>
       <%= render 'comments/form' %>
     </div>
 </div>

@@ -40,7 +40,7 @@ p.pull-right img {
   padding-right: 4px;
 }
 
-.navbar { min-height: 38px; background-color: #f55e55; }
+.navbar { min-height: 38px; background-color: papayawhip; }
 .navbar a.brand { font-size: 18px; }
 .navbar a.brand:hover { color: black; background-color: papayawhip; text-decoration: none; }
 .navbar a.brand:active { color: black; background-color: papayawhip; text-decoration: none; }
@@ -59,4 +59,8 @@ footer {
   margin-top: 1em;
   margin-bottom: 1em;
   font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+td {
+  padding: 1em 1em 1em 0;
 }

@@ -9,6 +9,8 @@ gem 'sqlite3'
 gem 'devise'
 # Use gravtastic for gravatars
 gem 'gravtastic'
+# Use country_select to get list of countries
+gem 'country_select'
 #Use carrierwave for picture uploads
 gem 'carrierwave'
 gem 'mini_magick', '3.8.0'

@@ -13,17 +13,25 @@ class CommentsController < ApplicationController
   end
 
   def new
+    @cooking_show = CookingShow.find(params[:cooking_show_id])
     @comment = Comment.new
-    respond_with(@comment)
-  end
-
-  def edit
+    @comment.cooking_show = @cooking_show
+    @comment = current_user.comments.build
   end
 
   def create
+    @user = User.find(params[:id])
     @comment = Comment.new(comment_params)
-    @comment.save
-    respond_with(@comment)
+
+    respond_to do |format|
+      if @comment.save
+        format.html { redirect_to @comment, notice: 'Comment was successfully added.'}
+        format.json { render :show, status: :created, location: @comment }
+      else
+        format.html { render :new }
+        format.json { render json: @comment.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
   def update
